@@ -42,20 +42,9 @@ class Counter:
            print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
 
-        """
-        if words == ' ' or  self.letter_count > len(
     def count(self):
+        self.word_count = len(self.sentence.split())
 
-        self.word_count = 0
-        #self.letter_count = 0
-
-        self.word_count = len(self.sentence.split())Za  
-
-self.sentence):
-            self.word_count += 1
-
-        self.letter_count += 1
-        """ 
         #print("Actual letters in sentence: ", len(self.sentence))
         #print("Counted letters in sentence: ", self.letter_count)
         print("Words counted: ", self.word_count)
