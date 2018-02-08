@@ -14,6 +14,8 @@ MTSU Software Engineering CSCI-4700/5700 project with <a href="http://research.v
 1. Quantify when and whether a child likes or dislikes aspects. 
 
 ## Dependencies for python3
-1. PyAudio >= 0.2.11
-2. SpeechRecognition >= 3.8.1
-3. PocketSphinx >= 0.1.3 (for offline recognition)
+1. <a href="http://www.portaudio.com/">PortAudio</a> >= 19
+1. <a href="https://people.csail.mit.edu/hubert/pyaudio/">PyAudio</a> >= 0.2.11
+2. <a href="https://pypi.python.org/pypi/SpeechRecognition/">SpeechRecognition</a> >= 3.8.1
+3. <a href="http://www.swig.org/download.html">swig</a> >= 3.0.12
+3. <a href="https://github.com/cmusphinx/pocketsphinx">PocketSphinx</a> >= 0.1.3 (for offline recognition)
