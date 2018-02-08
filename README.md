@@ -13,3 +13,7 @@ MTSU Software Engineering CSCI-4700/5700 project with <a href="http://research.v
 ## Other goals
 1. Quantify when and whether a child likes or dislikes aspects. 
 
+## Dependencies for python3
+1. PyAudio >= 0.2.11
+2. SpeechRecognition >= 3.8.1
+3. PocketSphinx >= 0.1.3 (for offline recognition)
