@@ -1,3 +1,5 @@
+<center><img src="https://i.imgur.com/iLqILvT.png" height=100 width=100></img></center>
+
 # Measuring-Speech
 MTSU Software Engineering CSCI-4700/5700 project with <a href="http://research.vuse.vanderbilt.edu/rasl/pase-cane-homepage/">Vanderbilt</a>
 
