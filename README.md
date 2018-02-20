@@ -11,11 +11,10 @@ MTSU Software Engineering CSCI-4700/5700 project with <a href="http://research.v
 3. Content of the sentence. Is it a sentence, is it a question?
 
 ## Other goals
-1. Quantify when and whether a child likes or dislikes aspects. 
+1. Quantify when and whether a child likes or dislikes aspects.
 
 ## Dependencies for python3
-1. <a href="http://www.portaudio.com/">PortAudio</a> >= 19
-1. <a href="https://people.csail.mit.edu/hubert/pyaudio/">PyAudio</a> >= 0.2.11
-2. <a href="https://pypi.python.org/pypi/SpeechRecognition/">SpeechRecognition</a> >= 3.8.1
-3. <a href="http://www.swig.org/download.html">swig</a> >= 3.0.12
-3. <a href="https://github.com/cmusphinx/pocketsphinx">PocketSphinx</a> >= 0.1.3 (for offline recognition)
+All the requirements of the project can be install via a single command:
+```pip install -r requirements.txt```
+
+a virutal environment is recommend to avoid package conflict and to avoid wrong python version.
