@@ -24,8 +24,8 @@ class SoundCount(Resource):
         # Create a temp file, assume bad result.
         filename = str(uuid.uuid4())
         payload = {'status': 'failure',
-                   'text': '',
-                   'meta': {}}
+                   'count': 0,
+                   'meta': {'text': ''}}
 
         # Parse the request into a dict() which conatins the raw wav data.
         parse = reqparse.RequestParser()
@@ -40,7 +40,7 @@ class SoundCount(Resource):
         words = utils.speech_rec(filename)
 
         # Tag the words
-        payload['text'] = utils.pos_tagger([words])
+        payload['meta']['text'] = utils.pos_tagger([words['meta']['text']])
         d = utils.duration(filename)
 
         # Check for errors

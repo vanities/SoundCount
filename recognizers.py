@@ -11,7 +11,7 @@ def sphinx(r, audio):
     try:
         phrase = r.recognize_sphinx(audio)
         payload['count'] = utils.word_count(phrase)
-        return phrase.split()
+        meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "Sphinx could not understand audio"
     except sr.RequestError as e:
