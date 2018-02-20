@@ -2,6 +2,7 @@
 import os
 import uuid
 import utils
+import nltk
 import werkzeug
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
@@ -22,7 +23,9 @@ class SoundCount(Resource):
 
         # create a temp file, assume bad result.
         filename = str(uuid.uuid4())
-        payload = {'status': 'failure'}
+        payload = {'status': 'failure',
+                   'text': '',
+                   'meta': {}}
 
         # parse the request into a dict() which conatins the raw wav data.
         parse = reqparse.RequestParser()
@@ -34,7 +37,11 @@ class SoundCount(Resource):
         audioFile.save(filename)
 
         # count the number of words spoken, update playload in progress.
-        payload = utils.speech_rec(filename)
+        words = utils.speech_rec(filename)
+
+        print([words])
+
+        payload['text'] = utils.pos_tagger([words])
         d = utils.duration(filename)
 
         # Check for errors

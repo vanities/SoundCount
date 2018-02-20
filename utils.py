@@ -1,8 +1,11 @@
-import speech_recognition as sr
-from recognizers import sphinx
-import contextlib
 import wave
+import nltk
+import contextlib
+import speech_recognition as sr
+
 from os import path
+from recognizers import sphinx
+
 
 def duration(filename):
     with contextlib.closing(wave.open(filename, 'r')) as f:
@@ -23,3 +26,13 @@ def speech_rec(filename):
 
 def word_count(phrase):
     return len(phrase.split())
+
+def pos_tagger(words):
+
+    #words = [['hello', 'there', '.']]
+    tag_words = []
+
+    for word in words:
+        tag_words.append(nltk.pos_tag(word))
+
+    return tag_words
