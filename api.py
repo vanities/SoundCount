@@ -41,6 +41,10 @@ class SoundCount(Resource):
 
         # Tag the words
         payload['meta']['text'] = utils.pos_tagger([words['meta']['text']])
+
+        for sentence in payload['meta']['text']:
+            payload['count'] += len(sentence)
+
         d = utils.duration(filename)
 
         # Check for errors
