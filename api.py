@@ -21,13 +21,13 @@ class SoundCount(Resource):
 
     def post(self):
 
-        # create a temp file, assume bad result.
+        # Create a temp file, assume bad result.
         filename = str(uuid.uuid4())
         payload = {'status': 'failure',
                    'text': '',
                    'meta': {}}
 
-        # parse the request into a dict() which conatins the raw wav data.
+        # Parse the request into a dict() which conatins the raw wav data.
         parse = reqparse.RequestParser()
         parse.add_argument('file', type=werkzeug.datastructures.FileStorage, location='files')
         args = parse.parse_args()
@@ -36,11 +36,10 @@ class SoundCount(Resource):
         audioFile = args['file']
         audioFile.save(filename)
 
-        # count the number of words spoken, update playload in progress.
+        # Extract & count the number of words spoken.
         words = utils.speech_rec(filename)
 
-        print([words])
-
+        # Tag the words
         payload['text'] = utils.pos_tagger([words])
         d = utils.duration(filename)
 
@@ -49,6 +48,7 @@ class SoundCount(Resource):
             payload['status'] = 'success'
             payload['meta']['duration'] = d
 
+        # Remove temp file
         os.remove(filename)
         return payload
 

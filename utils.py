@@ -27,9 +27,8 @@ def speech_rec(filename):
 def word_count(phrase):
     return len(phrase.split())
 
-def pos_tagger(words):
 
-    #words = [['hello', 'there', '.']]
+def pos_tagger(words):
     tag_words = []
 
     for word in words:
