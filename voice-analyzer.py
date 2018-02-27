@@ -8,7 +8,7 @@ clffa = joblib.load('utils/cfl_age.pkl')
 clffd = joblib.load('utils/cfl_dialect.pkl')
 
 # use the file created
-y, sr = librosa.load("me.wav", sr=22050)
+y, sr = librosa.load("robertwalters.wav", sr=22050)
 
 # finds the spectrogram from the voice
 spectrogram = np.abs(librosa.stft(y))
