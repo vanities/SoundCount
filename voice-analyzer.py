@@ -3,9 +3,9 @@ import librosa
 from sklearn.externals import joblib
 
 # grab the pickel'd libraries for the recognizer
-clffg = joblib.load('utils/cfl_gender.pkl')
-clffa = joblib.load('utils/cfl_age.pkl') 
-clffd = joblib.load('utils/cfl_dialect.pkl')
+clffg = joblib.load('models/cfl_gender.pkl')
+clffa = joblib.load('models/cfl_age.pkl') 
+clffd = joblib.load('models/cfl_dialect.pkl')
 
 # use the file created
 y, sr = librosa.load("robertwalters.wav", sr=22050)
