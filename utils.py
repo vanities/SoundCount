@@ -93,9 +93,9 @@ class Log:
     def critical(self, message):
         self.logger.info("CRITICAL: {0}".format(message))
 
-logger = Log()
-logger.debug("This message")
-logger.info("That message")
-logger.warning("Bad message")
-logger.error("uh oh message")
-logger.critical("FFUUUUUU!")
+# logger = Log()
+# logger.debug("This message")
+# logger.info("That message")
+# logger.warning("Bad message")
+# logger.error("uh oh message")
+# logger.critical("FFUUUUUU!")
