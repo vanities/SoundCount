@@ -37,7 +37,8 @@ namespace MeasSpeech
             waveIn.DataAvailable += (s, a) =>
             {
                 waveWriter.Write(a.Buffer, 0, a.BytesRecorded);
-            };            
+            };     
+            //Somewhere in here is where the Upload(url, file) function call will go       
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,5 +70,26 @@ namespace MeasSpeech
                 waveIn.Dispose();
             };
         }
+
+        //This is Robert's Function for sending the post request
+        //Will comment later
+        async static void Upload(string actionUrl, Stream paramFileStream)
+        {
+            HttpContent fileStreamContent = new StreamContent(paramFileStream);
+            using (var client = new HttpClient())
+            using (var formData = new MultipartFormDataContent())
+            {
+                formData.Add(fileStreamContent, "file1", "file1");
+                var response = client.PostAsync(actionUrl, formData).Result;
+                Stream theStream = await response.Content.ReadAsStreamAsync();
+                StreamReader theReader = new StreamReader(theStream);
+                string theLine = null;
+                while ((theLine = theReader.ReadLine()) != null)
+                {
+                    Console.WriteLine(theLine);
+                }
+            }
+        }
+        //--------------------------------------------------------
     }
 }
