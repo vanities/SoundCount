@@ -5,7 +5,7 @@ import utils
 
 import werkzeug
 from utils import logger
-from flask import Flask
+from flask import Flask, request
 from analyzer import voice_analyzer
 from flask_restful import Resource, Api, reqparse
 
@@ -38,11 +38,16 @@ class SoundCount(Resource):
         audio_file = args['file']
         audio_file.save(filename)
 
-
-        logger.info("Analyzing temp file {0}".format(filename))
+        logger.info("Analyzing temp file.")
         # Extract the words and perform an analysis.
-        words = utils.speech_rec(filename)
-        analysis = voice_analyzer(filename)
+        try:
+            words = utils.speech_rec(filename)
+            analysis = voice_analyzer(filename)
+        except:
+            logger.error("File uploaded does not appear to be an wav file")
+            os.remove(filename)
+            logger.debug("temp file removed.  Was {0}".format(filename))
+            return payload
 
         # Tag the words
         payload['meta']['text'] = utils.pos_tagger([words['meta']['text']])

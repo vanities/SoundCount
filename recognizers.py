@@ -18,8 +18,6 @@ def sphinx(r, audio):
     except sr.RequestError as e:
         payload['error'] = "Sphinx error; {0}".format(e)
         logger.error("Sphinx error; {0}".format(e))
-    except ValueError:
-        print("boom!")
 
     payload.update({'meta': meta})
     return payload

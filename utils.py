@@ -22,7 +22,7 @@ def speech_rec(filename):
         with sr.AudioFile(audio_file) as source:
             audio = r.record(source)
     except ValueError:
-        print("boom!")
+        return
 
     return sphinx(r, audio)
 
