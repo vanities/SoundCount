@@ -1,9 +1,11 @@
 import numpy as np
 import librosa
+from utils import logger
 import environment as env
 
 
 def voice_analyzer(filename):
+
     # use the file created
     y, sr = librosa.load(filename, sr=22050)
 
@@ -30,4 +32,5 @@ def voice_analyzer(filename):
     info['gender'] = env.clffg.predict(features)[0]#pred = env.clffg.predict(features)
     info['age'] = env.clffa.predict(features)[0] #pred = env.clffa.predict(features)
     info['dialect'] = env.clffd.predict(features)[0] # pred = env.clffd.predict(features)
+    logger.info("voice_analyzer completed task: {gender} {age} {dialect}".format(gender=info['gender'], age=info['age'], dialect=info['dialect']))
     return info

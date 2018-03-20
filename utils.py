@@ -4,10 +4,8 @@ import logging
 import contextlib
 import speech_recognition as sr
 
-
 from os import path
 from recognizers import sphinx
-
 
 def duration(filename):
     with contextlib.closing(wave.open(filename, 'r')) as f:
@@ -20,8 +18,11 @@ def speech_rec(filename):
     audio_file = path.join(path.dirname(path.realpath(__file__)), filename)
     r = sr.Recognizer()
 
-    with sr.AudioFile(audio_file) as source:
-        audio = r.record(source)
+    try:
+        with sr.AudioFile(audio_file) as source:
+            audio = r.record(source)
+    except ValueError:
+        print("boom!")
 
     return sphinx(r, audio)
 
@@ -65,7 +66,7 @@ class CustomFormatter(logging.Formatter):
         return result
 
 
-class Log:
+class Log():
 
     def __init__(self):
         self.logger = logging.getLogger('sound_count_log')
@@ -93,7 +94,8 @@ class Log:
     def critical(self, message):
         self.logger.info("CRITICAL: {0}".format(message))
 
-# logger = Log()
+logger = Log()
+
 # logger.debug("This message")
 # logger.info("That message")
 # logger.warning("Bad message")

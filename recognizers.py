@@ -14,8 +14,12 @@ def sphinx(r, audio):
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "Sphinx could not understand audio"
+        logger.error("Sphinx couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Sphinx error; {0}".format(e)
+        logger.error("Sphinx error; {0}".format(e))
+    except ValueError:
+        print("boom!")
 
     payload.update({'meta': meta})
     return payload
@@ -31,9 +35,11 @@ def google(r, audio):
         payload['count'] = utils.word_count(phrase)
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
-        payload['error'] = "Google Speech Recognition could not understand audio"
+        payload['error'] = "Google Speech Recognizer could not understand audio"
+        logger.error("Google Speech Recognizer couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Could not request results from Google Speech Recognition service; {0}".format(e)
+        logger.error("Could not request results from Google Speech Recognition service; {0}".format(e))
 
     payload.update({'meta': meta})
     return payload
@@ -50,8 +56,10 @@ def google_sound_cloud(r, audio):
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "Google Cloud Speech could not understand audio"
+        logger.error("Google Cloud Speech couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Could not request results from Google Cloud Speech service; {0}".format(e)
+        logger.error("Could not request results from Google Cloud speech Recognition service; {0}".format(e))
 
     payload.update({'meta': meta})
     return payload
@@ -68,8 +76,10 @@ def wit(r, audio):
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "Wit.ai could not understand audio"
+        logger.error("Wit.ai couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Could not request results from Wit.ai service; {0}".format(e)
+        logger.error("Could not request results from Wit.ai service; {0}".format(e))
 
     return payload
 
@@ -84,9 +94,11 @@ def bing(r, audio):
         payload['count'] = utils.word_count(phrase)
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
-        print("Microsoft Bing Voice Recognition could not understand audio")
+        payload['error'] = "Microsoft Bing Voice Recognition could not understand audio"
+        logger.error("Microsoft Bing Voice Recognition  couldn't understand audio")
     except sr.RequestError as e:
-        print("Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e))
+        payload['error'] = "Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e)
+        logger.error("Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e))
 
     return payload
 
@@ -102,8 +114,10 @@ def houndify(r, audio):
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "Houndify could not understand audio"
+        logger.error("Houndify couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Could not request results from Houndify service; {0}".format(e)
+        logger.error("Could not request results from Houndify service; {0}".format(e))
 
     payload.update({'meta': meta})
     return payload
@@ -120,8 +134,10 @@ def ibm(r, audio):
         meta['text'] = phrase.split()
     except sr.UnknownValueError:
         payload['error'] = "IBM Speech to Text could not understand audio"
+        logger.error("IBM Speech to Text couldn't understand audio")
     except sr.RequestError as e:
         payload['error'] = "Could not request results from IBM Speech to Text service; {0}".format(e)
+        logger.error("Could not request results from IBM Speech to Text service; {0}".format(e))
 
     payload.update({'meta': meta})
     return payload

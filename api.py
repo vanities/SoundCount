@@ -2,7 +2,9 @@
 import os
 import uuid
 import utils
+
 import werkzeug
+from utils import logger
 from flask import Flask
 from analyzer import voice_analyzer
 from flask_restful import Resource, Api, reqparse
@@ -17,10 +19,9 @@ class SoundCount(Resource):
     file: the file field.
     """
 
-    def __init__(self):
-        pass
-
     def post(self):
+        logger.info("POST Request received.")
+
 
         # Create a temp file, assume bad result.
         payload = {'status': 'failure',
@@ -37,6 +38,8 @@ class SoundCount(Resource):
         audio_file = args['file']
         audio_file.save(filename)
 
+
+        logger.info("Analyzing temp file {0}".format(filename))
         # Extract the words and perform an analysis.
         words = utils.speech_rec(filename)
         analysis = voice_analyzer(filename)
@@ -48,8 +51,8 @@ class SoundCount(Resource):
         payload['meta']['dialect'] = analysis['dialect']
 
         # Count the words
-        for sentence in payload['meta']['text']:
-            payload['count'] += len(sentence)
+        for word in payload['meta']['text']:
+            payload['count'] += len(word)
 
         duration = utils.duration(filename)
 
@@ -58,10 +61,18 @@ class SoundCount(Resource):
             payload['status'] = 'success'
             payload['meta']['duration'] = duration
 
+        logger.info("Analysis complete {count} WORDs, {gen} GENDER,{dur} seconds".format(
+            count=payload['count'],
+            gen="NYI",
+            dur="%6.2f" % duration))
+
         # Remove temp file
         os.remove(filename)
+        logger.debug("temp file removed.  Was {0}".format(filename))
         return payload
 
+
+logger.debug('Starting flask app.')
 
 # Create the app and resource (root)
 app = Flask(__name__)
