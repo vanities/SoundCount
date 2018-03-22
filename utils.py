@@ -1,7 +1,9 @@
+import os
 import wave
 import nltk
 import logging
 import contextlib
+import environment as env
 import speech_recognition as sr
 
 from os import path
@@ -74,25 +76,38 @@ class Log():
 
         self.formatter = CustomFormatter()
 
-        self.handler = logging.StreamHandler()
-        self.handler.setFormatter(self.formatter)
+        self.stdout_handler = logging.StreamHandler()
+        self.stdout_handler.setFormatter(self.formatter)
 
-        self.logger.addHandler(self.handler)
+        self.file_handler = logging.FileHandler(env.app_vars['LOG_PATH'])
+        self.file_handler.setFormatter(self.formatter)
+
+        self.logger.addHandler(self.stdout_handler)
+        self.logger.addHandler(self.file_handler)
 
     def debug(self, message):
+        self.check_size()
         self.logger.debug("DEBUG: {0}".format(message))
 
     def info(self, message):
+        self.check_size()
         self.logger.info("INFO: {0}".format(message))
 
     def warning(self, message):
+        self.check_size()
         self.logger.info("WARNING: {0}".format(message))
 
     def error(self, message):
+        self.check_size()
         self.logger.info("ERROR: {0}".format(message))
 
     def critical(self, message):
+        self.check_size()
         self.logger.info("CRITICAL: {0}".format(message))
+
+    def check_size(self):
+        if os.path.getsize(env.app_vars['LOG_PATH']) > env.app_vars['LOG_MAXSIZE']:
+            os.remove(env.app_vars['LOG_PATH'])
 
 logger = Log()
 

@@ -22,8 +22,7 @@ class SoundCount(Resource):
     def post(self):
         logger.info("POST Request received.")
 
-
-        # Create a temp file, assume bad result.
+        # assume bad result, create temp file.
         payload = {'status': 'failure',
                    'count': 0,
                    'meta': {}}
@@ -38,15 +37,15 @@ class SoundCount(Resource):
         audio_file = args['file']
         audio_file.save(filename)
 
-        logger.info("Analyzing temp file.")
+        logger.info("Analyzing temp file: {0}".format(filename))
         # Extract the words and perform an analysis.
         try:
             words = utils.speech_rec(filename)
             analysis = voice_analyzer(filename)
         except:
-            logger.error("File uploaded does not appear to be an wav file")
+            logger.error("File does not appear to be a valid wav file")
             os.remove(filename)
-            logger.debug("temp file removed.  Was {0}".format(filename))
+            logger.debug("Temp file removed. Was {0}".format(filename))
             return payload
 
         # Tag the words
@@ -60,20 +59,17 @@ class SoundCount(Resource):
             payload['count'] += len(word)
 
         duration = utils.duration(filename)
+        logger.info("Analysis completed")
 
         # Check for errors
         if 'error' not in payload:
             payload['status'] = 'success'
             payload['meta']['duration'] = duration
 
-        logger.info("Analysis complete {count} WORDs, {gen} GENDER,{dur} seconds".format(
-            count=payload['count'],
-            gen="NYI",
-            dur="%6.2f" % duration))
-
         # Remove temp file
         os.remove(filename)
-        logger.debug("temp file removed.  Was {0}".format(filename))
+        logger.debug("Temp file removed.  Was {0}".format(filename))
+        
         return payload
 
 

@@ -1,6 +1,7 @@
-from environment import creds
 import utils
 import speech_recognition as sr
+
+from environment import creds
 
 
 def sphinx(r, audio):

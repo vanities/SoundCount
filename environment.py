@@ -2,6 +2,10 @@ import os
 import utils
 from sklearn.externals import joblib
 
+app_vars = {
+    'LOG_PATH': 'logs/log.log',
+    'LOG_MAXSIZE': 512 * 1024}
+
 creds = {
     'BING_KEY': '',
     'GOOGLE_CLOUD_SPEECH': '',
