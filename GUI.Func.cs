@@ -24,7 +24,7 @@ namespace MeasSpeech
         {
             /*  Set path variables for writing file.
              *  Creates a directory called AudioFiles in ../User/Desktop    */
-            var outF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AudioFiles");
+            var outF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SoundCount");
             Directory.CreateDirectory(outF);
             var outFP = Path.Combine(outF, "rec.wav");  /*  destination filename    */
             waveWriter = new NAudio.Wave.WaveFileWriter(outFP, waveIn.WaveFormat);
