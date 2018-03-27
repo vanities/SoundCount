@@ -37,8 +37,7 @@ namespace MeasSpeech
             waveIn.DataAvailable += (s, a) =>
             {
                 waveWriter.Write(a.Buffer, 0, a.BytesRecorded);
-            };     
-            //Somewhere in here is where the Upload(url, file) function call will go       
+            };           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,7 +47,8 @@ namespace MeasSpeech
 
         private void ProcessAudio_btn_Click(object sender, EventArgs e)
         {
-
+            postRecordedFile();
+            //I need to add code to account for no file being present
         }
 
         private void PlayBack_btn_Click(object sender, EventArgs e)
@@ -91,5 +91,22 @@ namespace MeasSpeech
             }
         }
         //--------------------------------------------------------
+
+        //This should be called by the Process Audio button
+        //Sends a POST Request to the docker file located on localhost at port 12345
+        static void postRecordedFile()
+        {
+            var pathenv = @"%USERPROFILE%\AppData\Roaming\SoundCount\rec.wav";
+            var path = Environment.ExpandEnvironmentVariables(pathenv);
+            //string path = @"C:\Users\Imagi\Desktop\test1.txt";
+            string url = "http://localhost:12345/";
+
+
+            using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                Upload(url, fs);
+            }
+        }
+        //---------------------------------------------------------------------
     }
 }
