@@ -1,5 +1,4 @@
 import os
-import utils
 from sklearn.externals import joblib
 
 app_vars = {

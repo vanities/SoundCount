@@ -20,4 +20,4 @@ COPY . /app
 
 ENTRYPOINT [ "python3" ]
 
-CMD [ "voice-analyzer.py" ]
+CMD [ "api.py" ]
