@@ -3,7 +3,10 @@ import librosa
 from utils import logger
 import environment as env
 
-
+# Voice Analyzer, analyzes the voice from speech to text, finding out the gender, age, and dialect of
+# the speaker
+# INPUT:  the filename, of wanting to be examined
+# OUTPUT: The info of the speaker as a dictionary
 def voice_analyzer(filename):
 
     # use the file created
@@ -29,8 +32,8 @@ def voice_analyzer(filename):
     # make a prediction from the features
     # print the predictions
     info = dict()
-    info['gender'] = env.clffg.predict(features)[0]#pred = env.clffg.predict(features)
-    info['age'] = env.clffa.predict(features)[0] #pred = env.clffa.predict(features)
-    info['dialect'] = env.clffd.predict(features)[0] # pred = env.clffd.predict(features)
+    info['gender'] = env.clffg.predict(features)[0]     #pred = env.clffg.predict(features)
+    info['age'] = env.clffa.predict(features)[0]        #pred = env.clffa.predict(features)
+    info['dialect'] = env.clffd.predict(features)[0]    #pred = env.clffd.predict(features)
     logger.info("voice_analyzer completed task: {gender} {age} {dialect}".format(gender=info['gender'], age=info['age'], dialect=info['dialect']))
     return info

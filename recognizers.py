@@ -3,7 +3,7 @@ import speech_recognition as sr
 
 from environment import creds
 
-
+# Sphinx Recognizer, Free to use but only decent at recognizing
 def sphinx(r, audio):
 
     payload = {'count': 'invalid'}
@@ -23,7 +23,7 @@ def sphinx(r, audio):
     payload.update({'meta': meta})
     return payload
 
-
+# Googles recognizer, not free to use but spot on with recognizing
 def google(r, audio):
 
     payload = {'count': 'invalid'}
@@ -63,7 +63,7 @@ def google_sound_cloud(r, audio):
     payload.update({'meta': meta})
     return payload
 
-
+# Wit recognizer, not free decent at recognizing
 def wit(r, audio):
 
     payload = {'count': 'invalid'}
@@ -82,7 +82,7 @@ def wit(r, audio):
 
     return payload
 
-
+# Bing recognizer, not free but really good at recongizing
 def bing(r, audio):
 
     payload = {'count': 'invalid'}
@@ -101,7 +101,7 @@ def bing(r, audio):
 
     return payload
 
-
+# Houndify recognizer, not free and decent at recognizing
 def houndify(r, audio):
 
     payload = {'count': 'invalid'}
@@ -121,7 +121,7 @@ def houndify(r, audio):
     payload.update({'meta': meta})
     return payload
 
-
+# IBM's recognizer, not free pretty good and accurate recognizer
 def ibm(r, audio):
 
     payload = {'count': 'invalid'}
