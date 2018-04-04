@@ -17,12 +17,14 @@ def duration(filename):
 
 
 def speech_rec(filename):
+
     audio_file = path.join(path.dirname(path.realpath(__file__)), filename)
     r = sr.Recognizer()
 
     try:
-        with sr.AudioFile(audio_file) as source:
-            audio = r.record(source)
+        with open(audio_file) as audio:
+            with sr.AudioFile(audio) as source:
+                audio =  r.record(source)
     except ValueError:
         return
 
