@@ -39,7 +39,7 @@ class SoundCount(Resource):
             audio_file.save(filename)
         except AttributeError:
                 if audio_file is None:
-                    logger.error("Audio data not received.")
+                    logger.error("Audio data not received")
                     return payload
 
         logger.info("Analyzing temp file: {0}".format(filename))
@@ -49,6 +49,7 @@ class SoundCount(Resource):
             analysis = voice_analyzer(filename)
         except:
             logger.error("File does not appear to be a valid wav file")
+
             os.remove(filename)
             logger.debug("Temp file removed. Was {0}".format(filename))
             return payload
@@ -77,13 +78,11 @@ class SoundCount(Resource):
 
         return payload
 
-
-logger.debug('Starting flask app.')
-
 # Create the app and resource (root)
 app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(SoundCount, '/')
 if __name__ == '__main__':
+    logger.debug('Starting flask app.')
     app.run(host='0.0.0.0', debug=False)
