@@ -34,8 +34,13 @@ class SoundCount(Resource):
 
         # Save the data as a temporary file
         filename = str(uuid.uuid4())
-        audio_file = args['file']
-        audio_file.save(filename)
+        try:
+            audio_file = args['file']
+            audio_file.save(filename)
+        except AttributeError:
+                if audio_file is None:
+                    logger.error("Audio data not received.")
+                    return payload
 
         logger.info("Analyzing temp file: {0}".format(filename))
         # Extract the words and perform an analysis.
@@ -69,7 +74,7 @@ class SoundCount(Resource):
         # Remove temp file
         os.remove(filename)
         logger.debug("Temp file removed.  Was {0}".format(filename))
-        
+
         return payload
 
 
