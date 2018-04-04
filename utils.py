@@ -23,7 +23,7 @@ def speech_rec(filename):
 
     try:
         with open(audio_file) as audio, sr.AudioFile(audio) as source:
-                audio =  r.record(source)
+            audio =  r.record(source)
     except ValueError:
         return
 
