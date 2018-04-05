@@ -2,9 +2,29 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Net.Http; //http requests
+using System.Collections.Generic;
+using Newtonsoft.Json; //This requires download of NuGet Newtonsoft's Json.Net
 
 namespace MeasSpeech
 {
+    //The following are Classes necessary for parsing JSON
+    public class Meta
+    {
+        public List<List<List<string>>> text { get; set; }
+        public string gender { get; set; }
+        public string age { get; set; }
+        public string dialect { get; set; }
+        public double duration { get; set; }
+    }
+
+    public class RootObject
+    {
+        public string status { get; set; }
+        public int count { get; set; }
+        public Meta meta { get; set; }
+    }
+    //----------------------------------------------
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -71,41 +91,43 @@ namespace MeasSpeech
             };
         }
 
-        //This is Robert's Function for sending the post request
-        //Will comment later
-        async static void Upload(string actionUrl, Stream paramFileStream)
-        {
-            HttpContent fileStreamContent = new StreamContent(paramFileStream);
-            using (var client = new HttpClient())
-            using (var formData = new MultipartFormDataContent())
-            {
-                formData.Add(fileStreamContent, "file1", "file1");
-                var response = client.PostAsync(actionUrl, formData).Result;
-                Stream theStream = await response.Content.ReadAsStreamAsync();
-                StreamReader theReader = new StreamReader(theStream);
-                string theLine = null;
-                while ((theLine = theReader.ReadLine()) != null)
-                {
-                    Console.WriteLine(theLine);
-                }
-            }
-        }
+        
         //--------------------------------------------------------
 
         //This should be called by the Process Audio button
-        //Sends a POST Request to the docker file located on localhost at port 12345
-        static void postRecordedFile()
+        //Sends a POST Request to the python script running flask at localhost:5000
+        async static void postRecordedFile()
         {
             var pathenv = @"%USERPROFILE%\AppData\Roaming\SoundCount\rec.wav";
             var path = Environment.ExpandEnvironmentVariables(pathenv);
             //string path = @"C:\Users\Imagi\Desktop\test1.txt";
-            string url = "http://localhost:12345/";
+            string url = "http://localhost:5000";
+
+            HttpClient client = new HttpClient();
+            MultipartFormDataContent content = new MultipartFormDataContent();
 
 
-            using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read))
-            {
-                Upload(url, fs);
-            }
+            content.Add(new StreamContent(File.Open(path, FileMode.Open)), "Audio", "test1.txt");
+            content.Add(new StringContent("Place string content here"), "Content-Id in the HTTP");
+
+            //This sends the POST Request
+            HttpResponseMessage result = await client.PostAsync(url, content);
+
+            //This returns the POST response status. Should say 200 OK
+            Console.WriteLine(result.ToString()); //currently writes to Console, but can be modified to output to a string variable
+
+
+            //Everything below still inside the function is for reading the content
+            Stream theStream = await result.Content.ReadAsStreamAsync(); //read in the response to a stream
+            StreamReader theReader = new StreamReader(theStream); //create a reader for the stream
+
+            //Parsing JSON
+            string theLine = theReader.ReadToEnd(); //Gets POST Request Response Message
+            RootObject jsonObject = JsonConvert.DeserializeObject<RootObject>(theLine); //Deserialize the JSON into our created classes
+
+
+            //Test of JSON Parse
+            Console.WriteLine(jsonObject.status);
         }
         //---------------------------------------------------------------------
     }
