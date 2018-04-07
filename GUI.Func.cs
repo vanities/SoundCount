@@ -4,27 +4,11 @@ using System.IO;
 using System.Net.Http; //http requests
 using System.Collections.Generic;
 using Newtonsoft.Json; //This requires download of NuGet Newtonsoft's Json.Net
+using System.Diagnostics;
+using NAudio.Wave;
 
 namespace MeasSpeech
 {
-    //The following are Classes necessary for parsing JSON
-    public class Meta
-    {
-        public List<List<List<string>>> text { get; set; }
-        public string gender { get; set; }
-        public string age { get; set; }
-        public string dialect { get; set; }
-        public double duration { get; set; }
-    }
-
-    public class RootObject
-    {
-        public string status { get; set; }
-        public int count { get; set; }
-        public Meta meta { get; set; }
-    }
-    //----------------------------------------------
-
     public partial class Form1 : Form
     {
         public Form1()
@@ -33,21 +17,33 @@ namespace MeasSpeech
         }
 
         /*  waveIn stores wave data from input device   */
-        private NAudio.Wave.WaveInEvent waveIn = new NAudio.Wave.WaveInEvent();
-        NAudio.Wave.WaveFileWriter waveWriter = null;   /*  File writer for .wav format.
+        private WaveInEvent waveIn = new WaveInEvent();
+        WaveFileWriter waveWriter = null;   /*  File writer for .wav format.
                                                          *  Is created when user requests to record.  */
+
+        WaveOutEvent wo = new WaveOutEvent();
 
         /*  instantiate HTTpClient  */
         private static HttpClient client = new HttpClient();
 
         private void Record_btn_Click(object sender, EventArgs e)
         {
+            Stop_btn.Show();
+            Record_btn.Hide();
+            PlayBack_btn.Hide();
+            PlaybackStop_btn.Hide();
             /*  Set path variables for writing file.
              *  Creates a directory called AudioFiles in ../User/Desktop    */
             var outF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SoundCount");
             Directory.CreateDirectory(outF);
             var outFP = Path.Combine(outF, "rec.wav");  /*  destination filename    */
-            waveWriter = new NAudio.Wave.WaveFileWriter(outFP, waveIn.WaveFormat);
+            //try { waveWriter = new WaveFileWriter(outFP, waveIn.WaveFormat); }
+            //catch { waveWriter?.Dispose();
+            //    waveWriter = null;
+            //    waveWriter = new WaveFileWriter(outFP, waveIn.WaveFormat);
+            //}
+            waveWriter = new WaveFileWriter(outFP, waveIn.WaveFormat);
+            waveIn = new WaveInEvent();
 
             /*  start   */
             waveIn.StartRecording();
@@ -57,12 +53,26 @@ namespace MeasSpeech
             waveIn.DataAvailable += (s, a) =>
             {
                 waveWriter.Write(a.Buffer, 0, a.BytesRecorded);
-            };           
+            };
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Stop_btn.Hide();
+            PlaybackStop_btn.Hide();
+            PlayBack_btn.Hide();
 
+            //start python process on load.
+            //call backend application
+            var backendPath = Path.Combine(Application.StartupPath, "t.py"); //t.py is just a temporary script, api.py will used here
+            var python = @"C:\Program Files\Python36\python.exe";   //location of python.exe
+   
+            //Initialize process and start.
+            Process proc = new Process();
+            proc.StartInfo.FileName = python;
+            proc.StartInfo.Arguments= backendPath;
+            proc.EnableRaisingEvents = true;
+            proc.Start();
         }
 
         private void ProcessAudio_btn_Click(object sender, EventArgs e)
@@ -73,25 +83,34 @@ namespace MeasSpeech
 
         private void PlayBack_btn_Click(object sender, EventArgs e)
         {
+            PlaybackStop_btn.Show();
+            //file path of audio file to play
+            var outF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SoundCount");
+            Directory.CreateDirectory(outF);
+            var outFP = Path.Combine(outF, "rec.wav");  /*  destination filename    */
 
+            //create audiofile object
+            var af = new AudioFileReader(outFP);
+            wo.PlaybackStopped += (s, a) => { { wo.Dispose(); af.Dispose(); } };
+            try { wo.Init(af); } catch { wo.Play(); }
+            wo.Play();
         }
 
         private void Stop_btn_Click(object sender, EventArgs e)
         {
-            /*  stop  */
+            PlayBack_btn.Show();
+            Record_btn.Show();
+            Stop_btn.Hide();
+            //Stop recording
             waveIn.StopRecording();
 
             /*  Properly dispose of the file writer
              *  in order for .wav headers to be written correctly    */
-            waveIn.RecordingStopped += (s, a) =>
-            {
-                waveWriter?.Dispose();
-                waveWriter = null;
-                waveIn.Dispose();
-            };
+            waveWriter?.Dispose();
+            waveWriter = null;
+            waveIn.Dispose();  
         }
 
-        
         //--------------------------------------------------------
 
         //This should be called by the Process Audio button
@@ -129,6 +148,30 @@ namespace MeasSpeech
             //Test of JSON Parse
             Console.WriteLine(jsonObject.status);
         }
+
+        private void PlaybackStop_btn_Click(object sender, EventArgs e)
+        {
+            wo.Stop();
+        }
         //---------------------------------------------------------------------
     }
+    //The following are Classes necessary for parsing JSON
+    public class Meta
+    {
+        public List<List<List<string>>> text { get; set; }
+        public string gender { get; set; }
+        public string age { get; set; }
+        public string dialect { get; set; }
+        public double duration { get; set; }
+    }
+
+    public class RootObject
+    {
+        public string status { get; set; }
+        public int count { get; set; }
+        public Meta meta { get; set; }
+    }
+    //----------------------------------------------
+
+
 }
