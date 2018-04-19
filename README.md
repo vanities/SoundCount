@@ -39,12 +39,14 @@ use ```deactivate``` to exit out of your environment.
 
 To verify which environment you're in, use ```which pip```.  if you see that the pip location is in your environment folder (env), then you are in your virtual environment.  Also notice that in virtualenv, python3 is now the default interpreter which makes life much easier.  Check using ```python --version``` and notice the __lack__ of 3 at the end.
 
-### Install packages
+### Install packages and requirements:
 
 Then its as easy as:  
 ```pip install -r requirements.txt```  
 
-Be sure to download the NLTK data: ```python3```, the interpreter:  
+Be sure to download the NLTK dataset: use ```python<3>``` to bring up the interpreter:  
 ```import nltk```
 ```nltk.download()```  
+
+```swig``` is a dependance for some python packages.  Use ```apt```, ```brew```, or ```choco``` to ```install swig``` 
 
