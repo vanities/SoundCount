@@ -45,5 +45,6 @@ Then its as easy as:
 ```pip install -r requirements.txt```  
 
 Be sure to download the NLTK data: ```python3```, the interpreter:  
-```import nltk nltk.download()```  
+```import nltk```
+```nltk.download()```  
 
