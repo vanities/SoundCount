@@ -41,12 +41,11 @@ To verify which environment you're in, use ```which pip```.  if you see that the
 
 ### Install packages and requirements:
 
-Then its as easy as:  
-```pip install -r requirements.txt```  
-
-Be sure to download the NLTK dataset: use ```python<3>``` to bring up the interpreter:  
-```import nltk```
-```nltk.download()```  
-
 ```swig``` is a dependance for some python packages.  Use ```apt```, ```brew```, or ```choco``` to ```install swig``` 
 
+Then install python packages by:  
+```pip install -r requirements.txt```  
+
+Be sure to download the NLTK dataset: use ```python<3>``` to bring up an interpreter:  
+```import nltk```
+```nltk.download()```  
