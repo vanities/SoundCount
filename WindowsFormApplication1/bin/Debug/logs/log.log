@@ -1,0 +1,340 @@
+2018-04-10 12:20:34,963: DEBUG: Starting flask app.
+2018-04-10 12:22:52,538: DEBUG: Starting flask app.
+2018-04-10 12:23:24,644: INFO: POST Request received.
+2018-04-10 12:23:24,651: ERROR: Audio data not received
+2018-04-10 12:23:58,122: INFO: POST Request received.
+2018-04-10 12:23:58,141: INFO: Analyzing temp file: b3fb8848-f9ff-4e4e-84c0-546a68bf7ef8
+2018-04-10 12:23:59,856: INFO: voice_analyzer completed task: Male Adult American
+2018-04-10 12:28:30,971: DEBUG: Starting flask app.
+2018-04-10 12:29:30,611: INFO: POST Request received.
+2018-04-10 12:29:30,633: INFO: Analyzing temp file: 114c3edb-7f6e-4d21-8664-b7eb387666da
+2018-04-10 12:29:30,910: INFO: voice_analyzer completed task: Male Adult European
+2018-04-10 12:33:11,981: DEBUG: Starting flask app.
+2018-04-10 12:33:34,316: INFO: POST Request received.
+2018-04-10 12:33:34,344: INFO: Analyzing temp file: 4d1aa32f-a030-4291-a849-2b00b5decf38
+2018-04-10 12:33:34,799: INFO: voice_analyzer completed task: Male Adult Australasia
+2018-04-10 12:34:39,109: DEBUG: Starting flask app.
+2018-04-10 12:35:10,353: DEBUG: Starting flask app.
+2018-04-10 12:35:19,031: INFO: POST Request received.
+2018-04-10 12:35:19,048: INFO: Analyzing temp file: 1277067d-47d1-45f7-8345-e570051c2cc0
+2018-04-10 12:35:19,347: INFO: voice_analyzer completed task: Male Adult Australasia
+2018-04-10 12:39:37,721: DEBUG: Starting flask app.
+2018-04-10 12:39:52,913: INFO: POST Request received.
+2018-04-10 12:39:52,932: INFO: Analyzing temp file: 4bc0595e-17b1-4926-8aae-1acd2bd2178e
+2018-04-10 12:39:54,152: INFO: voice_analyzer completed task: Male Youth Indian
+2018-04-11 18:51:26,044: DEBUG: Starting flask app.
+2018-04-11 18:51:37,574: INFO: POST Request received.
+2018-04-11 18:51:37,594: INFO: Analyzing temp file: c7f6de09-397d-4d08-ab81-45b40d4d024a
+2018-04-11 18:51:39,114: INFO: voice_analyzer completed task: Male Adult European
+2018-04-11 18:53:13,746: DEBUG: Starting flask app.
+2018-04-11 18:53:41,901: DEBUG: Starting flask app.
+2018-04-11 18:54:00,402: INFO: POST Request received.
+2018-04-11 18:54:00,424: INFO: Analyzing temp file: a2a292e3-001e-407f-854a-0443ee216a4b
+2018-04-11 18:54:00,605: INFO: voice_analyzer completed task: Male Adult European
+2018-04-11 18:54:44,862: DEBUG: Starting flask app.
+2018-04-11 18:54:56,263: INFO: POST Request received.
+2018-04-11 18:54:56,294: INFO: Analyzing temp file: 1b32683d-3893-494e-ba4d-2f8f5b0c91d9
+2018-04-11 18:54:57,820: INFO: voice_analyzer completed task: Male Adult European
+2018-04-11 18:59:55,615: DEBUG: Starting flask app.
+2018-04-11 19:00:16,835: INFO: POST Request received.
+2018-04-11 19:00:16,854: INFO: Analyzing temp file: eb10cd26-48bd-4bc1-a0a1-af11e282a8ba
+2018-04-11 19:00:18,784: INFO: voice_analyzer completed task: Male Youth European
+2018-04-11 19:02:33,148: DEBUG: Starting flask app.
+2018-04-11 19:02:46,459: INFO: POST Request received.
+2018-04-11 19:02:46,492: INFO: Analyzing temp file: 296e2323-3860-4921-8e7a-765756e07bbe
+2018-04-11 19:02:48,084: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:07:09,058: DEBUG: Starting flask app.
+2018-04-11 19:11:20,266: DEBUG: Starting flask app.
+2018-04-11 19:11:28,939: INFO: POST Request received.
+2018-04-11 19:11:28,974: INFO: Analyzing temp file: 756271ee-7255-4637-9499-3b6b65434c96
+2018-04-11 19:11:30,494: INFO: voice_analyzer completed task: Male Youth European
+2018-04-11 19:11:34,096: INFO: POST Request received.
+2018-04-11 19:11:34,121: INFO: Analyzing temp file: 9364df56-247b-4c07-a683-6070f27b388e
+2018-04-11 19:11:34,505: INFO: voice_analyzer completed task: Male Youth European
+2018-04-11 19:11:54,097: DEBUG: Starting flask app.
+2018-04-11 19:12:17,652: DEBUG: Starting flask app.
+2018-04-11 19:12:24,336: INFO: POST Request received.
+2018-04-11 19:12:24,366: INFO: Analyzing temp file: a9a5c4e8-0981-4d29-876b-efb1900316d1
+2018-04-11 19:12:25,984: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:13:25,588: DEBUG: Starting flask app.
+2018-04-11 19:13:55,781: INFO: POST Request received.
+2018-04-11 19:13:55,789: ERROR: Audio data not received
+2018-04-11 19:14:00,895: INFO: POST Request received.
+2018-04-11 19:14:00,902: ERROR: Audio data not received
+2018-04-11 19:14:37,220: INFO: POST Request received.
+2018-04-11 19:14:37,229: ERROR: Audio data not received
+2018-04-11 19:14:40,915: INFO: POST Request received.
+2018-04-11 19:14:40,928: ERROR: Audio data not received
+2018-04-11 19:14:44,974: INFO: POST Request received.
+2018-04-11 19:14:44,984: ERROR: Audio data not received
+2018-04-11 19:14:52,792: INFO: POST Request received.
+2018-04-11 19:14:52,802: ERROR: Audio data not received
+2018-04-11 19:15:58,660: INFO: POST Request received.
+2018-04-11 19:15:58,668: ERROR: Audio data not received
+2018-04-11 19:16:06,391: INFO: POST Request received.
+2018-04-11 19:16:06,408: INFO: Analyzing temp file: d144d7cd-f298-4ca8-acee-767c25dad57b
+2018-04-11 19:16:09,722: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:17:37,640: DEBUG: Starting flask app.
+2018-04-11 19:17:41,788: INFO: POST Request received.
+2018-04-11 19:17:41,804: INFO: Analyzing temp file: 5e4d6f80-0e06-4ada-954d-740425f7fa3d
+2018-04-11 19:17:43,234: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:18:37,218: DEBUG: Starting flask app.
+2018-04-11 19:18:43,957: INFO: POST Request received.
+2018-04-11 19:18:43,973: INFO: Analyzing temp file: c7071447-2d98-4e25-b244-f0429b62f8fe
+2018-04-11 19:18:45,409: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:20:32,967: DEBUG: Starting flask app.
+2018-04-11 19:20:33,560: INFO: POST Request received.
+2018-04-11 19:20:33,577: INFO: Analyzing temp file: a5ad0bfc-0a2c-4cbc-a551-42658753f54b
+2018-04-11 19:20:35,306: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:20:38,731: INFO: POST Request received.
+2018-04-11 19:20:38,747: INFO: Analyzing temp file: 04df4fac-1723-45fb-b1ef-18310a28bfbd
+2018-04-11 19:20:39,480: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:21:21,939: DEBUG: Starting flask app.
+2018-04-11 19:21:22,509: INFO: POST Request received.
+2018-04-11 19:21:22,526: INFO: Analyzing temp file: ce96be5c-1be4-4f65-a8a1-9d92630975fc
+2018-04-11 19:21:24,339: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:22:32,285: DEBUG: Starting flask app.
+2018-04-11 19:22:35,276: INFO: POST Request received.
+2018-04-11 19:22:35,293: INFO: Analyzing temp file: 35754472-0917-4f97-8da4-ee0bd612b5b2
+2018-04-11 19:22:36,766: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:22:55,478: INFO: POST Request received.
+2018-04-11 19:22:55,495: INFO: Analyzing temp file: 76e520b9-a05d-434d-851d-105133b4018f
+2018-04-11 19:22:56,236: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:23:05,654: DEBUG: Starting flask app.
+2018-04-11 19:23:14,652: INFO: POST Request received.
+2018-04-11 19:23:14,669: INFO: Analyzing temp file: 11ee6061-ec85-49cf-af81-bf43fdf267bf
+2018-04-11 19:23:16,708: INFO: voice_analyzer completed task: Female Adult European
+2018-04-11 19:25:30,184: DEBUG: Starting flask app.
+2018-04-11 19:25:37,504: INFO: POST Request received.
+2018-04-11 19:25:37,519: INFO: Analyzing temp file: a7f91db3-f29d-4f65-b966-d801d6765222
+2018-04-11 19:25:37,525: ERROR: File does not appear to be a valid wav file
+2018-04-11 19:25:37,532: DEBUG: Temp file removed. Was a7f91db3-f29d-4f65-b966-d801d6765222
+2018-04-11 19:26:23,323: DEBUG: Starting flask app.
+2018-04-11 19:26:36,366: INFO: POST Request received.
+2018-04-11 19:26:36,387: INFO: Analyzing temp file: cfdf2c9d-96d7-4041-b40e-d8d585618c6c
+2018-04-11 19:26:36,399: ERROR: File does not appear to be a valid wav file
+2018-04-11 19:26:36,409: DEBUG: Temp file removed. Was cfdf2c9d-96d7-4041-b40e-d8d585618c6c
+2018-04-11 19:29:48,279: DEBUG: Starting flask app.
+2018-04-11 19:29:59,463: INFO: POST Request received.
+2018-04-11 19:29:59,486: INFO: Analyzing temp file: 4ac38d29-ceaf-4899-9cf6-7ca2c8bcfabf
+2018-04-11 19:30:00,931: INFO: voice_analyzer completed task: Male Adult European
+2018-04-11 19:33:34,149: DEBUG: Starting flask app.
+2018-04-11 19:33:42,290: INFO: POST Request received.
+2018-04-11 19:33:42,327: INFO: Analyzing temp file: 026c4b67-6802-4151-baf6-a75d5e990989
+2018-04-11 19:33:44,129: INFO: voice_analyzer completed task: Female Adult Indian
+2018-04-11 19:35:03,097: DEBUG: Starting flask app.
+2018-04-11 19:35:35,915: DEBUG: Starting flask app.
+2018-04-11 19:35:47,288: INFO: POST Request received.
+2018-04-11 19:35:47,318: INFO: Analyzing temp file: ffbe845c-11a4-42e9-b417-37386ceed52d
+2018-04-11 19:35:48,648: INFO: voice_analyzer completed task: Male Adult Australasia
+2018-04-11 19:36:46,707: DEBUG: Starting flask app.
+2018-04-11 19:36:58,141: INFO: POST Request received.
+2018-04-11 19:36:58,179: INFO: Analyzing temp file: 01d6dfff-1077-4048-aac8-c741930bcec8
+2018-04-11 19:37:00,485: INFO: voice_analyzer completed task: Male Youth European
+2018-04-11 19:43:49,363: DEBUG: Starting flask app.
+2018-04-11 19:44:00,198: INFO: POST Request received.
+2018-04-11 19:44:00,212: INFO: Analyzing temp file: 2e12bc3d-8799-4cbc-a752-37452822db09
+2018-04-11 19:44:01,677: INFO: voice_analyzer completed task: Male Adult European
+2018-04-11 19:49:02,915: DEBUG: Starting flask app.
+2018-04-11 19:52:59,581: DEBUG: Starting flask app.
+2018-04-12 08:12:50,706: DEBUG: Starting flask app.
+2018-04-12 08:13:05,548: DEBUG: Starting flask app.
+2018-04-12 08:13:21,221: DEBUG: Starting flask app.
+2018-04-12 08:13:33,936: INFO: POST Request received.
+2018-04-12 08:13:33,966: INFO: Analyzing temp file: cb9f51d4-fb4f-4a3f-b716-2d33c7cace88
+2018-04-12 08:13:41,886: INFO: voice_analyzer completed task: Male Youth American
+2018-04-12 08:18:57,455: DEBUG: Starting flask app.
+2018-04-12 08:20:06,911: DEBUG: Starting flask app.
+2018-04-12 08:20:26,510: INFO: POST Request received.
+2018-04-12 08:20:26,548: INFO: Analyzing temp file: 23f8a035-b961-4ed5-9a1c-37c57b7c0617
+2018-04-12 08:20:35,439: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 08:20:35,605: INFO: Analysis completed
+2018-04-12 08:20:35,614: DEBUG: Temp file removed.  Was 23f8a035-b961-4ed5-9a1c-37c57b7c0617
+2018-04-12 08:24:49,976: DEBUG: Starting flask app.
+2018-04-12 08:25:22,583: INFO: POST Request received.
+2018-04-12 08:25:22,617: INFO: Analyzing temp file: a58926a7-de77-439a-9c57-92b04a58fa1f
+2018-04-12 08:25:31,903: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 08:25:31,935: INFO: Analysis completed
+2018-04-12 08:25:31,945: DEBUG: Temp file removed.  Was a58926a7-de77-439a-9c57-92b04a58fa1f
+2018-04-12 09:37:07,262: DEBUG: Starting flask app.
+2018-04-12 09:37:18,349: INFO: POST Request received.
+2018-04-12 09:37:18,382: INFO: Analyzing temp file: 8603850e-5fd8-4057-8438-1c2da9640302
+2018-04-12 09:37:28,498: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 09:37:28,641: INFO: Analysis completed
+2018-04-12 09:37:28,651: DEBUG: Temp file removed.  Was 8603850e-5fd8-4057-8438-1c2da9640302
+2018-04-12 09:43:06,827: DEBUG: Starting flask app.
+2018-04-12 09:43:31,750: INFO: POST Request received.
+2018-04-12 09:43:31,805: INFO: Analyzing temp file: a7c88531-79ea-43a2-be36-fb4b937e1f6d
+2018-04-12 09:43:37,962: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 09:43:37,973: INFO: Analysis completed
+2018-04-12 09:43:37,981: DEBUG: Temp file removed.  Was a7c88531-79ea-43a2-be36-fb4b937e1f6d
+2018-04-12 09:45:32,901: DEBUG: Starting flask app.
+2018-04-12 09:45:45,749: INFO: POST Request received.
+2018-04-12 09:45:45,788: INFO: Analyzing temp file: a0b2160d-57ca-4973-8da5-d1466ec59d2c
+2018-04-12 09:45:51,669: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 09:45:51,680: INFO: Analysis completed
+2018-04-12 09:45:51,688: DEBUG: Temp file removed.  Was a0b2160d-57ca-4973-8da5-d1466ec59d2c
+2018-04-12 09:48:57,082: DEBUG: Starting flask app.
+2018-04-12 09:49:29,340: DEBUG: Starting flask app.
+2018-04-12 09:49:37,286: INFO: POST Request received.
+2018-04-12 09:49:37,329: INFO: Analyzing temp file: 4c381a29-97b8-420f-aef5-ffbfdf5e16b3
+2018-04-12 09:49:43,799: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 09:49:43,811: INFO: Analysis completed
+2018-04-12 09:49:43,820: DEBUG: Temp file removed.  Was 4c381a29-97b8-420f-aef5-ffbfdf5e16b3
+2018-04-12 09:57:08,718: DEBUG: Starting flask app.
+2018-04-12 09:57:18,225: INFO: POST Request received.
+2018-04-12 09:57:18,247: INFO: Analyzing temp file: 7f87a14f-fb4c-4102-91b3-4d0d73c6154c
+2018-04-12 09:57:25,056: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 09:57:25,206: INFO: Analysis completed
+2018-04-12 09:57:25,212: DEBUG: Temp file removed.  Was 7f87a14f-fb4c-4102-91b3-4d0d73c6154c
+2018-04-12 09:59:57,554: INFO: POST Request received.
+2018-04-12 09:59:57,599: INFO: Analyzing temp file: 80693b18-affc-4a47-8986-ac3063463226
+2018-04-12 10:00:19,516: INFO: voice_analyzer completed task: Male Adult Other
+2018-04-12 10:00:19,527: INFO: Analysis completed
+2018-04-12 10:00:19,535: DEBUG: Temp file removed.  Was 80693b18-affc-4a47-8986-ac3063463226
+2018-04-12 10:06:21,809: DEBUG: Starting flask app.
+2018-04-12 10:07:36,895: INFO: POST Request received.
+2018-04-12 10:07:36,921: INFO: Analyzing temp file: 5f1b2e09-534a-46ff-bb30-f03894d1fc12
+2018-04-12 10:07:46,178: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 10:07:46,310: INFO: Analysis completed
+2018-04-12 10:07:46,316: DEBUG: Temp file removed.  Was 5f1b2e09-534a-46ff-bb30-f03894d1fc12
+2018-04-12 10:11:13,330: INFO: POST Request received.
+2018-04-12 10:11:13,353: INFO: Analyzing temp file: 896c7abb-f57e-4b6b-a23b-eb6128a7036a
+2018-04-12 10:11:19,970: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 10:11:19,981: INFO: Analysis completed
+2018-04-12 10:11:19,989: DEBUG: Temp file removed.  Was 896c7abb-f57e-4b6b-a23b-eb6128a7036a
+2018-04-12 10:21:05,364: DEBUG: Starting flask app.
+2018-04-12 10:21:31,011: INFO: POST Request received.
+2018-04-12 10:21:31,052: INFO: Analyzing temp file: 57929c42-fcb9-4e89-8b94-cae41dcc147c
+2018-04-12 10:21:39,517: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 10:21:39,700: INFO: Analysis completed
+2018-04-12 10:21:39,709: DEBUG: Temp file removed.  Was 57929c42-fcb9-4e89-8b94-cae41dcc147c
+2018-04-12 10:23:06,386: DEBUG: Starting flask app.
+2018-04-12 10:23:25,560: INFO: POST Request received.
+2018-04-12 10:23:25,587: INFO: Analyzing temp file: e9ecc342-ffc7-46ca-8304-35a83182e4dc
+2018-04-12 10:23:36,917: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 10:23:37,141: INFO: Analysis completed
+2018-04-12 10:23:37,148: DEBUG: Temp file removed.  Was e9ecc342-ffc7-46ca-8304-35a83182e4dc
+2018-04-12 10:26:15,542: DEBUG: Starting flask app.
+2018-04-12 10:26:26,996: INFO: POST Request received.
+2018-04-12 10:26:27,017: INFO: Analyzing temp file: fef58a61-a008-43d5-9f59-170cc62a9c67
+2018-04-12 10:26:33,793: INFO: voice_analyzer completed task: Female Adult American
+2018-04-12 10:26:33,803: INFO: Analysis completed
+2018-04-12 10:26:33,812: DEBUG: Temp file removed.  Was fef58a61-a008-43d5-9f59-170cc62a9c67
+2018-04-12 10:26:39,766: INFO: POST Request received.
+2018-04-12 10:26:39,794: INFO: Analyzing temp file: 3e2ff88e-c86c-4748-92c1-095067bdcac1
+2018-04-12 10:26:46,352: INFO: voice_analyzer completed task: Female Adult American
+2018-04-12 10:26:46,364: INFO: Analysis completed
+2018-04-12 10:26:46,374: DEBUG: Temp file removed.  Was 3e2ff88e-c86c-4748-92c1-095067bdcac1
+2018-04-12 10:28:51,568: DEBUG: Starting flask app.
+2018-04-12 10:53:03,751: DEBUG: Starting flask app.
+2018-04-12 10:53:14,137: INFO: POST Request received.
+2018-04-12 10:53:14,163: INFO: Analyzing temp file: f6377d1a-2579-4573-8cad-f727aad37c5a
+2018-04-12 10:53:25,191: INFO: voice_analyzer completed task: Female Adult European
+2018-04-12 10:53:25,330: INFO: Analysis completed
+2018-04-12 10:53:25,338: DEBUG: Temp file removed.  Was f6377d1a-2579-4573-8cad-f727aad37c5a
+2018-04-12 11:03:50,303: DEBUG: Starting flask app.
+2018-04-12 11:03:54,538: INFO: POST Request received.
+2018-04-12 11:03:54,560: INFO: Analyzing temp file: c732dc2c-21d0-473a-af8f-847e607a239e
+2018-04-12 11:04:00,504: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:04:00,642: INFO: Analysis completed
+2018-04-12 11:04:00,648: DEBUG: Temp file removed.  Was c732dc2c-21d0-473a-af8f-847e607a239e
+2018-04-12 11:04:21,827: INFO: POST Request received.
+2018-04-12 11:04:21,842: INFO: Analyzing temp file: 66b85388-dc8b-4c40-8db9-2b73a640f9d3
+2018-04-12 11:04:26,544: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 11:04:26,551: INFO: Analysis completed
+2018-04-12 11:04:26,558: DEBUG: Temp file removed.  Was 66b85388-dc8b-4c40-8db9-2b73a640f9d3
+2018-04-12 11:11:35,041: INFO: POST Request received.
+2018-04-12 11:11:35,072: INFO: Analyzing temp file: 47d79341-769b-4761-a6c4-c70fff93f33d
+2018-04-12 11:11:36,416: INFO: voice_analyzer completed task: Female Adult American
+2018-04-12 11:11:36,423: INFO: Analysis completed
+2018-04-12 11:11:36,431: DEBUG: Temp file removed.  Was 47d79341-769b-4761-a6c4-c70fff93f33d
+2018-04-12 11:12:10,250: INFO: POST Request received.
+2018-04-12 11:12:10,280: INFO: Analyzing temp file: 87135df9-52d7-402c-9cd5-1fde792bab02
+2018-04-12 11:12:11,373: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:12:11,380: INFO: Analysis completed
+2018-04-12 11:12:11,388: DEBUG: Temp file removed.  Was 87135df9-52d7-402c-9cd5-1fde792bab02
+2018-04-12 11:13:43,919: INFO: POST Request received.
+2018-04-12 11:13:43,951: INFO: Analyzing temp file: da3ddb59-3d0f-4f0e-b511-92159b9e5ade
+2018-04-12 11:13:45,611: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:13:45,620: INFO: Analysis completed
+2018-04-12 11:13:45,628: DEBUG: Temp file removed.  Was da3ddb59-3d0f-4f0e-b511-92159b9e5ade
+2018-04-12 11:14:00,500: INFO: POST Request received.
+2018-04-12 11:14:00,546: INFO: Analyzing temp file: 3a8116cb-a83a-4869-aef7-6ee048b7ef08
+2018-04-12 11:14:05,749: INFO: voice_analyzer completed task: Male Youth European
+2018-04-12 11:14:05,760: INFO: Analysis completed
+2018-04-12 11:14:05,769: DEBUG: Temp file removed.  Was 3a8116cb-a83a-4869-aef7-6ee048b7ef08
+2018-04-12 11:14:58,590: INFO: POST Request received.
+2018-04-12 11:14:58,624: INFO: Analyzing temp file: 794408ee-c24d-401d-95d0-25d40ba5dd1e
+2018-04-12 11:15:00,460: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:15:00,468: INFO: Analysis completed
+2018-04-12 11:15:00,476: DEBUG: Temp file removed.  Was 794408ee-c24d-401d-95d0-25d40ba5dd1e
+2018-04-12 11:15:46,291: INFO: POST Request received.
+2018-04-12 11:15:46,331: INFO: Analyzing temp file: 565e87fd-9a38-4288-a109-c5a57ec5a153
+2018-04-12 11:15:52,656: INFO: voice_analyzer completed task: Female Adult Other
+2018-04-12 11:15:52,666: INFO: Analysis completed
+2018-04-12 11:15:52,674: DEBUG: Temp file removed.  Was 565e87fd-9a38-4288-a109-c5a57ec5a153
+2018-04-12 11:16:43,222: INFO: POST Request received.
+2018-04-12 11:16:43,260: INFO: Analyzing temp file: 281bc042-9530-4aff-8b8c-04babd25cd0f
+2018-04-12 11:16:47,387: INFO: voice_analyzer completed task: Male Adult Indian
+2018-04-12 11:16:47,397: INFO: Analysis completed
+2018-04-12 11:16:47,404: DEBUG: Temp file removed.  Was 281bc042-9530-4aff-8b8c-04babd25cd0f
+2018-04-12 11:17:07,089: INFO: POST Request received.
+2018-04-12 11:17:07,129: INFO: Analyzing temp file: 3492a85f-6313-4f6f-a8ff-9032026b4ea7
+2018-04-12 11:17:10,639: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:17:10,649: INFO: Analysis completed
+2018-04-12 11:17:10,656: DEBUG: Temp file removed.  Was 3492a85f-6313-4f6f-a8ff-9032026b4ea7
+2018-04-12 11:21:20,220: INFO: POST Request received.
+2018-04-12 11:21:20,262: INFO: Analyzing temp file: 178e35cb-0d93-4c23-89ec-7f40af0f0aac
+2018-04-12 11:21:23,801: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:21:23,809: INFO: Analysis completed
+2018-04-12 11:21:23,817: DEBUG: Temp file removed.  Was 178e35cb-0d93-4c23-89ec-7f40af0f0aac
+2018-04-12 11:21:38,617: INFO: POST Request received.
+2018-04-12 11:21:38,658: INFO: Analyzing temp file: bcd7b522-4013-4468-a8b8-97c143e5bd97
+2018-04-12 11:21:42,421: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:21:42,431: INFO: Analysis completed
+2018-04-12 11:21:42,438: DEBUG: Temp file removed.  Was bcd7b522-4013-4468-a8b8-97c143e5bd97
+2018-04-12 11:29:24,939: INFO: POST Request received.
+2018-04-12 11:29:24,964: INFO: Analyzing temp file: ebf2658e-1e36-4765-9e5c-567960fd51e4
+2018-04-12 11:29:27,903: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:29:27,913: INFO: Analysis completed
+2018-04-12 11:29:27,921: DEBUG: Temp file removed.  Was ebf2658e-1e36-4765-9e5c-567960fd51e4
+2018-04-12 11:30:20,564: INFO: POST Request received.
+2018-04-12 11:30:20,605: INFO: Analyzing temp file: 30183095-f9ba-432c-8855-3ea7b2a06115
+2018-04-12 11:30:25,144: INFO: voice_analyzer completed task: Male Adult Other
+2018-04-12 11:30:25,156: INFO: Analysis completed
+2018-04-12 11:30:25,162: DEBUG: Temp file removed.  Was 30183095-f9ba-432c-8855-3ea7b2a06115
+2018-04-12 11:30:56,856: INFO: POST Request received.
+2018-04-12 11:30:56,893: INFO: Analyzing temp file: fc4bb97f-a454-4c2c-b9d9-b907bf18db45
+2018-04-12 11:31:00,356: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:31:00,367: INFO: Analysis completed
+2018-04-12 11:31:00,375: DEBUG: Temp file removed.  Was fc4bb97f-a454-4c2c-b9d9-b907bf18db45
+2018-04-12 11:31:00,384: INFO: POST Request received.
+2018-04-12 11:31:00,400: INFO: Analyzing temp file: d6189769-8645-4caf-8127-bf3d9725e06c
+2018-04-12 11:31:03,706: INFO: voice_analyzer completed task: Male Adult American
+2018-04-12 11:31:03,715: INFO: Analysis completed
+2018-04-12 11:31:03,722: DEBUG: Temp file removed.  Was d6189769-8645-4caf-8127-bf3d9725e06c
+2018-04-12 11:31:15,551: INFO: POST Request received.
+2018-04-12 11:31:15,586: INFO: Analyzing temp file: fef16482-4890-4465-890a-7d192eceb3d4
+2018-04-12 11:31:18,785: INFO: voice_analyzer completed task: Male Youth American
+2018-04-12 11:31:18,797: INFO: Analysis completed
+2018-04-12 11:31:18,804: DEBUG: Temp file removed.  Was fef16482-4890-4465-890a-7d192eceb3d4
+2018-04-12 11:31:18,813: INFO: POST Request received.
+2018-04-12 11:31:18,830: INFO: Analyzing temp file: 91ab43e6-6175-4117-ac97-9882aebe4c2d
+2018-04-12 11:31:22,003: INFO: voice_analyzer completed task: Male Youth American
+2018-04-12 11:31:22,017: INFO: Analysis completed
+2018-04-12 11:31:22,025: DEBUG: Temp file removed.  Was 91ab43e6-6175-4117-ac97-9882aebe4c2d
+2018-04-12 12:10:00,049: DEBUG: Starting flask app.
+2018-04-12 12:10:07,543: INFO: POST Request received.
+2018-04-12 12:10:07,565: INFO: Analyzing temp file: a58e8d4a-25bf-4e09-a980-5d32d3740889
+2018-04-12 12:10:14,731: INFO: voice_analyzer completed task: Male Adult European
+2018-04-12 12:10:14,858: INFO: Analysis completed
+2018-04-12 12:10:14,866: DEBUG: Temp file removed.  Was a58e8d4a-25bf-4e09-a980-5d32d3740889
+2018-04-12 14:24:43,037: DEBUG: Starting flask app.
+2018-04-12 16:57:08,130: DEBUG: Starting flask app.
+2018-04-13 11:52:09,863: INFO: POST Request received.
+2018-04-13 11:52:09,907: INFO: Analyzing temp file: 53595f83-94e0-4199-a47a-d3e31168a6f9
+2018-04-13 11:52:13,946: DEBUG: Starting flask app.
+2018-04-13 11:52:16,617: INFO: voice_analyzer completed task: Male Senior Other
+2018-04-13 11:52:16,775: INFO: Analysis completed
+2018-04-13 11:52:16,784: DEBUG: Temp file removed.  Was 53595f83-94e0-4199-a47a-d3e31168a6f9
