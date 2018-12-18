@@ -31,15 +31,12 @@ def speech_rec(filename):
     r = sr.Recognizer()
 
     # try to open the audio file
-    try:
-        with open(audio_file) as audio, sr.AudioFile(audio) as source:
-            audio =  r.record(source)
-    except ValueError:
-        return
+    with sr.AudioFile(audio_file) as source:
+        audio = r.record(source)
 
     # return the speech to text
-    return sphinx(r, audio)
-
+    words = sphinx(r, audio)
+    return words
 
 # Word Count, counts the word in a sentence
 # Input:  a sentence phrase
